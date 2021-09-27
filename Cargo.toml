@@ -1,0 +1,18 @@
+[package]
+name = "tokio-sctp"
+version = "0.1.0"
+authors = ["Jeff Lai <jeff@oxio.io>"]
+edition = "2021"
+
+[dependencies]
+bitflags = "1"
+bytes = "1"
+libc = { version = "0.2", features = ["extra_traits"] }
+socket2 = "0.4"
+tokio = { version = "1", features = ["net", "io-util"] }
+tracing = "0.1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+tokio-test = "0.4"
