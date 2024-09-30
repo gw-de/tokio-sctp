@@ -3,7 +3,6 @@
 //! `tokio-sctp` provides non-blocking SCTP socket bindings over the tokio runtime. This crate is
 //! currently Linux only and only supports one-to-one style sockets. Building thus requires the
 //! [lksctp-tools](https://github.com/sctp/lksctp-tools) package is installed on the system.
-///
 mod listener;
 pub use listener::SctpListener;
 

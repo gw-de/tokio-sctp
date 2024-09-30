@@ -74,9 +74,7 @@ impl OwnedWriteHalf {
 impl Drop for OwnedWriteHalf {
     fn drop(&mut self) {
         if self.shutdown_on_drop {
-            if let Err(err) = self.inner.shutdown(std::net::Shutdown::Write) {
-                tracing::error!("socket shutdown failure: {}", err);
-            };
+            let _ = self.inner.shutdown(std::net::Shutdown::Write);
         }
     }
 }

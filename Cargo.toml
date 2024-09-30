@@ -3,6 +3,10 @@ name = "tokio-sctp"
 version = "0.1.0"
 authors = ["Jeff Lai <jeff@oxio.io>"]
 edition = "2021"
+description = "tokio SCTP socket bindings"
+license = "MIT"
+keywords = ["tokio", "sctp", "async", "socket"]
+repository = "https://github.com/jefftt/tokio-sctp"
 
 [dependencies]
 bitflags = "1"
@@ -10,7 +14,6 @@ bytes = "1"
 libc = { version = "0.2", features = ["extra_traits"] }
 socket2 = "0.4"
 tokio = { version = "1", features = ["net", "io-util"] }
-tracing = "0.1"
 
 [dev-dependencies]
 tokio = { version = "1", features = ["full"] }
